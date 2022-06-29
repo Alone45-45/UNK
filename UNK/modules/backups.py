@@ -5,23 +5,23 @@ from telegram import ParseMode, Message
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async
 
-import PglRobot.modules.sql.notes_sql as sql
-from PglRobot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
-from PglRobot.__main__ import DATA_IMPORT
-from PglRobot.modules.helper_funcs.chat_status import user_admin
-from PglRobot.modules.helper_funcs.alternate import typing_action
+import UNK.modules.sql.notes_sql as sql
+from UNK import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
+from UNK.__main__ import DATA_IMPORT
+from UNK.modules.helper_funcs.chat_status import user_admin
+from UNK.modules.helper_funcs.alternate import typing_action
 
-# from PglRobot.modules.rules import get_rules
-import PglRobot.modules.sql.rules_sql as rulessql
+# from UNK.modules.rules import get_rules
+import UNK.modules.sql.rules_sql as rulessql
 
-# from PglRobot.modules.sql import warns_sql as warnssql
-import PglRobot.modules.sql.blacklist_sql as blacklistsql
-from PglRobot.modules.sql import disable_sql as disabledsql
+# from UNK.modules.sql import warns_sql as warnssql
+import UNK.modules.sql.blacklist_sql as blacklistsql
+from UNK.modules.sql import disable_sql as disabledsql
 
-# from PglRobot.modules.sql import cust_filters_sql as filtersql
-# import PglRobot.modules.sql.welcome_sql as welcsql
-import PglRobot.modules.sql.locks_sql as locksql
-from PglRobot.modules.connection import connected
+# from UNK.modules.sql import cust_filters_sql as filtersql
+# import UNK.modules.sql.welcome_sql as welcsql
+import UNK.modules.sql.locks_sql as locksql
+from UNK.modules.connection import connected
 
 
 @run_async
