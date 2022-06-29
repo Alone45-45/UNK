@@ -4,7 +4,7 @@ import re
 from sys import argv
 from typing import Optional
 
-from PglRobot import (
+from UNK import (
     ALLOW_EXCL,
     CERT_PATH,
     DONATION_LINK,
@@ -24,9 +24,9 @@ from PglRobot import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from PglRobot.modules import ALL_MODULES
-from PglRobot.modules.helper_funcs.chat_status import is_user_admin
-from PglRobot.modules.helper_funcs.misc import paginate_modules
+from UNK.modules import ALL_MODULES
+from UNK.modules.helper_funcs.chat_status import is_user_admin
+from UNK.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -73,43 +73,38 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-I am a  Powerfull  group management bot. You can find my list of available commands with /help.
+ʜᴇᴍʟᴏ {} ᴍᴇʀᴀ ɴᴀᴍᴇ ʜᴀɪ{}❕
+ɪ ᴀᴍ ᴀ  ᴘᴏᴡᴇʀꜰᴜʟʟ  ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ. ʏᴏᴜ ᴄᴀɴ ꜰɪɴᴅ ᴍʏ ʟɪꜱᴛ ᴏꜰ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ᴡɪᴛʜ /help .
 """
 G_START_TEXT = """
-Hello PglRobot Is In The Chat.
-Uptime - {}!
+ʜᴇᴍʟᴏ ᴍʏ ʙᴏᴛ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
+Uptime - {}❕
 """
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
-I'm a Heroine For Fun and help admins to manage their groups! Have a look at the following for an idea of some of \
-the things I can help you with.
-*Main* commands available:
- • /help: PM's you this message.
- • /help <module name>: PM's you info about that module.
- • /donate: information on how to donate!
- • /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
-
+ʜᴇʏ ᴇᴠᴇʀʏᴏɴᴇ ; ᴍʏ ɴᴀᴍᴇ ɪꜱ *{}*.
+ɪ'ᴍ ʏᴏᴜʀ ᴀᴅᴠᴀɴᴄᴇ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ 😁.
+ᴋᴇᴇᴘ ꜱᴍɪʟᴇ ᴏɴ ʏᴏᴜʀ ꜰᴀᴄᴇ ᴀʟᴡᴀʏꜱ !!!
+*ᴍᴀɪɴ* ᴄᴏᴍᴍᴀɴᴅꜱ ᴀᴠᴀɪʟᴀʙʟᴇ:
+ • /ʜᴇʟᴘ: ᴘᴍ'ꜱ ʏᴏᴜ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ.
+ • /ʜᴇʟᴘ <ᴍᴏᴅᴜʟᴇ ɴᴀᴍᴇ>: ᴘᴍ'ꜱ ʏᴏᴜ ɪɴꜰᴏ ᴀʙᴏᴜᴛ ᴛʜᴀᴛ ᴍᴏᴅᴜʟᴇ.
+ • /ꜱᴇᴛᴛɪɴɢꜱ:
+   • ɪɴ ᴘᴍ: ᴡɪʟʟ ꜱᴇɴᴅ ʏᴏᴜ ʏᴏᴜʀ ꜱᴇᴛᴛɪɴɢꜱ ꜰᴏʀ ᴀʟʟ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇꜱ.
+   • ɪɴ ᴀ ɢʀᴏᴜᴘ: ᴡɪʟʟ ʀᴇᴅɪʀᴇᴄᴛ ʏᴏᴜ ᴛᴏ ᴘᴍ, ᴡɪᴛʜ ᴀʟʟ ᴛʜᴀᴛ ᴄʜᴀᴛ'ꜱ ꜱᴇᴛᴛɪɴɢꜱ.
 
 {}
-And the following:
+ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅꜱ ʜᴇʀᴇ !!!:
 """.format(
     dispatcher.bot.first_name,
-    "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
+    "" if not ALLOW_EXCL else "\nᴀʟʟ ᴄᴏᴍᴍᴀɴᴅꜱ ᴄᴀɴ ᴇɪᴛʜᴇʀ ʙᴇ ᴜꜱᴇᴅ ᴡɪᴛʜ / or !.\n",
 )
 
-PglRobot_IMG = "https://telegra.ph/file/f1d7b30b05ba9f0dbf4e5.jpg"
+UNK_IMG = "https://te.legra.ph/file/446ef073562ac610e93a9.jpg"
 
-PglRobotG_IMG = "https://telegra.ph/file/e8881931bc000c75e8f13.jpg"
+UNKG_IMG = "https://te.legra.ph/file/446ef073562ac610e93a9.jpg"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting [Gaurav Verma](https://t.me/iisgaurav).
- Using [PayPal](paypal.me/iisgaurav).
- Those who cannot provide monetary support are welcome to help us develop the bot at @VegaCodes.
- """
+DONATE_STRING = """ᴡᴇʟᴄᴏᴍᴇ ᴀʟʟ !!! ᴅᴏɴᴀᴛᴇ ʜᴇʀᴇ
+"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -122,7 +117,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("PglRobot.modules." + module_name)
+    imported_module = importlib.import_module("UNK.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -216,7 +211,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_photo(
-                PglRobot_IMG,
+                UNK_IMG,
                 PM_START_TEXT.format(
                     escape_markdown(first_name), escape_markdown(context.bot.first_name)
                 ),
@@ -226,7 +221,7 @@ def start(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="ADD ME IN YOUR GROUP ⚡️",
+                                text="ᴄʟᴜꜱᴛᴇʀ",
                                 url="t.me/{}?startgroup=true".format(
                                     context.bot.username
                                 ),
@@ -234,18 +229,18 @@ def start(update: Update, context: CallbackContext):
                         ],
                         [
                             InlineKeyboardButton(
-                                text="SUPPORT ⚡️",
+                                text="ᴀꜱꜱɪꜱᴛ",
                                 url=f"https://t.me/{SUPPORT_CHAT}",
                             ),
                             InlineKeyboardButton(
-                                text="UPDATES ⚡️",
-                                url="https://t.me/VCUpdates",
+                                text="ʀᴇɴᴏᴠᴀᴛᴇ",
+                                url="https://t.me/{}",
                             ),
                         ],
                         [
                             InlineKeyboardButton(
-                                text="SOURCE CODE ⚡️",
-                                url="https://github.com/iisgaurav/PglRobot",
+                                text="ᴄᴏᴅᴇʀ",
+                                url="https://t.me/TASTRON",
                             ),
                         ],
                     ]
@@ -253,7 +248,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            PglRobotG_IMG,
+            UNKG_IMG,
             G_START_TEXT.format(uptime),
         )
 
@@ -629,7 +624,7 @@ def main():
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
             dispatcher.bot.sendMessage(
-                f"@{SUPPORT_CHAT}", "PglRobot now ready to work!"
+                f"@{SUPPORT_CHAT}", ᴜɴᴋ ɴᴏᴡ ʀᴇᴀᴅʏ ᴛᴏ ᴡᴏʀᴋ "!"
             )
         except Unauthorized:
             LOGGER.warning(
