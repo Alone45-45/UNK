@@ -1,3 +1,18 @@
+# Config files, logs and stuff
+UNK/modules/helper_funcs/temp.txt
+UNK/elevated_users.json
+UNK/config.py
+UNK/config.ini
+log.txt
+kangsticker.png
+updates.txt
+
+# Session files
+UNK/*.session
+UNK/*.session-journal
+UNK.session-journal
+*.session
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -127,3 +142,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# VS code and shit
+*.pyc
+.idea/
+.project
+.pydevproject
+.directory
+.vscode
