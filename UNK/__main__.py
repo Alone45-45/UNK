@@ -234,7 +234,7 @@ def start(update: Update, context: CallbackContext):
                             ),
                             InlineKeyboardButton(
                                 text="ʀᴇɴᴏᴠᴀᴛᴇ",
-                                url="https://t.me/{}",
+                                url="https://t.me/UNK_NETWORK",
                             ),
                         ],
                         [
