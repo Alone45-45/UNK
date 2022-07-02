@@ -1,8 +1,8 @@
 import time
 from telethon import events
 
-from PglRobot import telethn
-from PglRobot.modules.helper_funcs.telethn.chatstatus import (
+from UNK import telethn
+from UNK.modules.helper_funcs.telethn.chatstatus import (
     can_delete_messages,
     user_is_admin,
 )
