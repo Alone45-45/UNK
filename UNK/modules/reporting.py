@@ -1,9 +1,9 @@
 import html
 
-from PglRobot import LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher
-from PglRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from PglRobot.modules.log_channel import loggable
-from PglRobot.modules.sql import reporting_sql as sql
+from UNK import LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher
+from UNK.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from UNK.modules.log_channel import loggable
+from UNK.modules.sql import reporting_sql as sql
 from telegram import Chat, InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import (
