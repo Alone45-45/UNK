@@ -1,6 +1,6 @@
-from PglRobot.modules.helper_funcs.chat_status import user_admin
-from PglRobot.modules.disable import DisableAbleCommandHandler
-from PglRobot import dispatcher
+from UNK.modules.helper_funcs.chat_status import user_admin
+from UNK.modules.disable import DisableAbleCommandHandler
+from UNK import dispatcher
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram import ParseMode, Update
