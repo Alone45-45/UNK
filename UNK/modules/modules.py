@@ -1,8 +1,8 @@
 import importlib
 import collections
 
-from PglRobot import dispatcher, telethn
-from PglRobot.__main__ import (
+from UNK import dispatcher, telethn
+from UNK.__main__ import (
     CHAT_SETTINGS,
     DATA_EXPORT,
     DATA_IMPORT,
@@ -13,7 +13,7 @@ from PglRobot.__main__ import (
     USER_INFO,
     USER_SETTINGS,
 )
-from PglRobot.modules.helper_funcs.chat_status import dev_plus, sudo_plus
+from UNK.modules.helper_funcs.chat_status import dev_plus, sudo_plus
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 
