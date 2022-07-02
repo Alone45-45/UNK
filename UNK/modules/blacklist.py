@@ -6,18 +6,18 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-import PglRobot.modules.sql.blacklist_sql as sql
-from PglRobot import dispatcher, LOGGER
-from PglRobot.modules.disable import DisableAbleCommandHandler
-from PglRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from PglRobot.modules.helper_funcs.extraction import extract_text
-from PglRobot.modules.helper_funcs.misc import split_message
-from PglRobot.modules.log_channel import loggable
-from PglRobot.modules.warns import warn
-from PglRobot.modules.helper_funcs.string_handling import extract_time
-from PglRobot.modules.connection import connected
-from PglRobot.modules.sql.approve_sql import is_approved
-from PglRobot.modules.helper_funcs.alternate import send_message, typing_action
+import UNK.modules.sql.blacklist_sql as sql
+from UNK import dispatcher, LOGGER
+from UNK.modules.disable import DisableAbleCommandHandler
+from UNK.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from UNK.modules.helper_funcs.extraction import extract_text
+from UNK.modules.helper_funcs.misc import split_message
+from UNK.modules.log_channel import loggable
+from UNK.modules.warns import warn
+from UNK.modules.helper_funcs.string_handling import extract_time
+from UNK.modules.connection import connected
+from UNK.modules.sql.approve_sql import is_approved
+from UNK.modules.helper_funcs.alternate import send_message, typing_action
 
 BLACKLIST_GROUP = 11
 
