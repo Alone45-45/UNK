@@ -6,8 +6,8 @@ import time
 import uuid
 from io import BytesIO
 
-import PglRobot.modules.sql.feds_sql as sql
-from PglRobot import (
+import UNK.modules.sql.feds_sql as sql
+from UNK import (
     EVENT_LOGS,
     LOGGER,
     SUPPORT_CHAT,
@@ -17,15 +17,15 @@ from PglRobot import (
     WOLVES,
     dispatcher,
 )
-from PglRobot.modules.disable import DisableAbleCommandHandler
-from PglRobot.modules.helper_funcs.alternate import send_message
-from PglRobot.modules.helper_funcs.chat_status import is_user_admin
-from PglRobot.modules.helper_funcs.extraction import (
+from UNK.modules.disable import DisableAbleCommandHandler
+from UNK.modules.helper_funcs.alternate import send_message
+from UNK.modules.helper_funcs.chat_status import is_user_admin
+from UNK.modules.helper_funcs.extraction import (
     extract_unt_fedban,
     extract_user,
     extract_user_fban,
 )
-from PglRobot.modules.helper_funcs.string_handling import markdown_parser
+from UNK.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
