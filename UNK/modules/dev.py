@@ -5,10 +5,10 @@ import sys
 from contextlib import suppress
 from time import sleep
 
-import PglRobot
+import UNK
 
-from PglRobot import dispatcher
-from PglRobot.modules.helper_funcs.chat_status import dev_plus
+from UNK import dispatcher
+from UNK.modules.helper_funcs.chat_status import dev_plus
 from telegram import TelegramError, Update
 from telegram.error import Unauthorized
 from telegram.ext import CallbackContext, CommandHandler, run_async
