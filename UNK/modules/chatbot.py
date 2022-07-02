@@ -3,14 +3,14 @@ import html
 # AI module using Intellivoid's Coffeehouse API by @TheRealPhoenix
 from time import sleep, time
 
-import PglRobot.modules.sql.chatbot_sql as sql
+import UNK.modules.sql.chatbot_sql as sql
 from coffeehouse.api import API
 from coffeehouse.exception import CoffeeHouseError as CFError
 from coffeehouse.lydia import LydiaAI
-from PglRobot import AI_API_KEY, OWNER_ID, SUPPORT_CHAT, dispatcher
-from PglRobot.modules.helper_funcs.chat_status import user_admin
-from PglRobot.modules.helper_funcs.filters import CustomFilters
-from PglRobot.modules.log_channel import gloggable
+from UNK import AI_API_KEY, OWNER_ID, SUPPORT_CHAT, dispatcher
+from UNK.modules.helper_funcs.chat_status import user_admin
+from UNK.modules.helper_funcs.filters import CustomFilters
+from UNK.modules.log_channel import gloggable
 from telegram import Update
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.ext import (
