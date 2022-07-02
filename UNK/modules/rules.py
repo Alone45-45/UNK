@@ -1,9 +1,9 @@
 from typing import Optional
 
-import PglRobot.modules.sql.rules_sql as sql
-from PglRobot import dispatcher
-from PglRobot.modules.helper_funcs.chat_status import user_admin
-from PglRobot.modules.helper_funcs.string_handling import markdown_parser
+import UNK.modules.sql.rules_sql as sql
+from UNK import dispatcher
+from UNK.modules.helper_funcs.chat_status import user_admin
+from UNK.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
