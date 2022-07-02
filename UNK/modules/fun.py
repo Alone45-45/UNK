@@ -2,11 +2,11 @@ import html
 import random
 import time
 
-import PglRobot.modules.fun_strings as fun_strings
-from PglRobot import dispatcher
-from PglRobot.modules.disable import DisableAbleCommandHandler
-from PglRobot.modules.helper_funcs.chat_status import is_user_admin
-from PglRobot.modules.helper_funcs.extraction import extract_user
+import UNK.modules.fun_strings as fun_strings
+from UNK import dispatcher
+from UNK.modules.disable import DisableAbleCommandHandler
+from UNK.modules.helper_funcs.chat_status import is_user_admin
+from UNK.modules.helper_funcs.extraction import extract_user
 from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async
