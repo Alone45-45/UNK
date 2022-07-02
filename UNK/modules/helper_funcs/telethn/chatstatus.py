@@ -1,5 +1,5 @@
-from PglRobot.modules.helper_funcs.telethn import IMMUNE_USERS, telethn
-from PglRobot import DRAGONS
+from UNK.modules.helper_funcs.telethn import IMMUNE_USERS, telethn
+from UNK import DRAGONS
 from telethon.tl.types import ChannelParticipantsAdmins
 
 
