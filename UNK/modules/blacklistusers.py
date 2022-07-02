@@ -1,7 +1,7 @@
 # Module to blacklist users and prevent them from using commands by @TheRealPhoenix
 import html
-import PglRobot.modules.sql.blacklistusers_sql as sql
-from PglRobot import (
+import UNK.modules.sql.blacklistusers_sql as sql
+from UNK import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -10,12 +10,12 @@ from PglRobot import (
     WOLVES,
     dispatcher,
 )
-from PglRobot.modules.helper_funcs.chat_status import dev_plus
-from PglRobot.modules.helper_funcs.extraction import (
+from UNK.modules.helper_funcs.chat_status import dev_plus
+from UNK.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from PglRobot.modules.log_channel import gloggable
+from UNK.modules.log_channel import gloggable
 from telegram import ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, run_async
