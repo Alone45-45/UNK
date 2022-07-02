@@ -2,9 +2,9 @@ import importlib
 from typing import Union
 
 from future.utils import string_types
-from PglRobot import dispatcher
-from PglRobot.modules.helper_funcs.handlers import CMD_STARTERS, SpamChecker
-from PglRobot.modules.helper_funcs.misc import is_module_loaded
+from UNK import dispatcher
+from UNK.modules.helper_funcs.handlers import CMD_STARTERS, SpamChecker
+from UNK.modules.helper_funcs.misc import is_module_loaded
 from telegram import ParseMode, Update
 from telegram.ext import (
     CallbackContext,
