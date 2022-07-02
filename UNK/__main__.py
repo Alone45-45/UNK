@@ -624,7 +624,7 @@ def main():
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
             dispatcher.bot.sendMessage(
-                f"@{SUPPORT_CHAT}", ᴜɴᴋ ɴᴏᴡ ʀᴇᴀᴅʏ ᴛᴏ ᴡᴏʀᴋ "!"
+                f"@{SUPPORT_CHAT}", " ᴜɴᴋ ɴᴏᴡ ʀᴇᴀᴅʏ ᴛᴏ ᴡᴏʀᴋ !"
             )
         except Unauthorized:
             LOGGER.warning(
