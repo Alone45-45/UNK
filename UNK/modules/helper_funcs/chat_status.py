@@ -403,6 +403,6 @@ def connection_status(func):
 
 
 # Workaround for circular import with connection.py
-from PglRobot.modules import connection
+from UNK.modules import connection
 
 connected = connection.connected
