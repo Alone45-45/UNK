@@ -45,7 +45,7 @@ except:
     pass
 
 
-@PglRobot(pattern="^/song (.*)")
+@UNK(pattern="^/song (.*)")
 async def download_video(v_url):
 
     lazy = v_url
@@ -165,7 +165,7 @@ async def download_video(v_url):
         os.remove(f"{rip_data['id']}.mp4")
 
 
-@PglRobot(pattern="^/video (.*)")
+@UNK(pattern="^/video (.*)")
 async def download_video(v_url):
     lazy = v_url
     sender = await lazy.get_sender()
