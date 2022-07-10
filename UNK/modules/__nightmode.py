@@ -1,9 +1,9 @@
-from Tianabot.modules.sql.night_mode_sql import add_nightmode, rmnightmode, get_all_chat_id, is_nightmode_indb
+from UNK.modules.sql.night_mode_sql import add_nightmode, rmnightmode, get_all_chat_id, is_nightmode_indb
 from telethon.tl.types import ChatBannedRights
 from apscheduler.schedulers.asyncio import AsyncIOScheduler 
 from telethon import functions
-from Tianabot.events import register
-from Tianabot import telethn, OWNER_ID
+from UNK.register import register
+from UNK import telethn, OWNER_ID
 import os
 from telethon import *
 from telethon import Button, custom, events
