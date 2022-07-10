@@ -1,8 +1,8 @@
 import os
-from Tianabot import telethn as tbot
+from UNK import telethn as tbot
 from geopy.geocoders import Nominatim
-from Tianabot.events import register
-from Tianabot import *
+from UNK.events import register
+from UNK import *
 from telethon import *
 from telethon.tl import *
 
