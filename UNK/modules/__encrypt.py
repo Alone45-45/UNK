@@ -1,6 +1,6 @@
-from Tianabot import telethn as tbot
+from UNK import telethn as tbot
 import os
-from Tianabot.events import register
+from UNK.events import register
 import secureme
 
 @register(pattern="^/encrypt ?(.*)")
