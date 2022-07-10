@@ -2,9 +2,9 @@ from pymongo import MongoClient
 from telethon import *
 from telethon.tl import *
 
-from Tianabot import BOT_ID, MONGO_DB_URI
-from Tianabot import telethn as tbot
-from Tianabot.events import register
+from UNK import BOT_ID, MONGO_DB_URI
+from UNK import telethn as tbot
+from UNK.events import register
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
