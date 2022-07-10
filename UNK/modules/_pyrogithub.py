@@ -1,8 +1,8 @@
 # © @Mr_Dark_Prince
 import aiohttp
 from pyrogram import filters
-from Tianabot import pbot
-from Tianabot.pyrogramee.errors import capture_err
+from UNK import pbot
+from UNK.pyrogramee.errors import capture_err
 
 
 __mod_name__ = "GITHUB"
