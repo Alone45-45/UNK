@@ -10,7 +10,7 @@ updates.txt
 # Session files
 UNK/*.session
 UNK/*.session-journal
-UNK.session-journal
+Masha.session-journal
 *.session
 
 # Byte-compiled / optimized / DLL files
