@@ -7,9 +7,9 @@ import aiohttp
 import youtube_dl
 
 from pyrogram import filters
-from Tianabot import pbot
+from UNK import pbot
 from youtube_search import YoutubeSearch
-from Tianabot.pyrogramee.errors import capture_err
+from UNK.pyrogramee.errors import capture_err
 
 
 def time_to_seconds(time):
