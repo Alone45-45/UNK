@@ -1,0 +1,14 @@
+import logging
+from pyrogram import Client, errors
+
+from UNK.config import get_str_key, get_int_key
+
+TOKEN = get_str_key("TOKEN", required=True)
+API_ID = get_int_key("API_ID", required=True)
+API_HASH = get_str_key("API_HASH", required=True)
+session_name = TOKEN.split(':')[0]
+pbot = Client(session_name, api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+
+# disable logging for pyrogram [not for ERROR logging]
+logging.getLogger('pyrogram').setLevel(level=logging.ERROR)
+pbot.start()
