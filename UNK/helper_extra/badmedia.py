@@ -1,4 +1,4 @@
-from Tianabot import telethn as tbot
+from UNK import telethn as tbot
 import requests
 import time
 
