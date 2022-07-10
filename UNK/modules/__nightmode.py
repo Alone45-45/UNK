@@ -2,7 +2,7 @@ from UNK.modules.sql.night_mode_sql import add_nightmode, rmnightmode, get_all_c
 from telethon.tl.types import ChatBannedRights
 from apscheduler.schedulers.asyncio import AsyncIOScheduler 
 from telethon import functions
-from UNK.register import register
+from UNK.events import register
 from UNK import telethn, OWNER_ID
 import os
 from telethon import *
